@@ -1,0 +1,153 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
+
+/* Design Tokens & CSS Variables */
+:root {
+  --bg-color: #ffffff;
+  --text-primary: #09090b;   /* zinc-950 */
+  --text-secondary: #3f3f46; /* zinc-700 */
+  --text-muted: #71717a;     /* zinc-500 */
+  --border-color: #e4e4e7;   /* zinc-200 */
+  --btn-bg: #09090b;         /* zinc-950 */
+  --btn-text: #ffffff;
+
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+}
+
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden; /* Single screen layout, no scrolling needed */
+}
+
+/* Page Layout */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: var(--spacing-lg);
+  position: relative;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(244, 244, 245, 0.4) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(244, 244, 245, 0.4) 0px, transparent 50%);
+}
+
+/* Elegant minimalist accent background: a subtle, faded grid pattern */
+.wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse at center, black, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black, transparent 75%);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Main Content Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 460px;
+  width: 100%;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  border-radius: 16px;
+  border: 1px solid rgba(228, 228, 231, 0.6); /* Subtle border for structure */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.01);
+  z-index: 1;
+}
+
+/* Heading Styling */
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 7vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Subtitle Styling */
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.5;
+}
+
+/* Short Description Line */
+.description {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  max-width: 360px;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Button Styling */
+.btn-coming-soon {
+  display: inline-block;
+  padding: 0.75rem 2.25rem;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-bg);
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: not-allowed;
+  opacity: 0.9;
+  box-shadow: 0 4px 14px rgba(9, 9, 11, 0.05);
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 480px) {
+  .wrapper {
+    padding: var(--spacing-sm);
+  }
+  .container {
+    padding: var(--spacing-lg) var(--spacing-sm);
+    border: none;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+  }
+}
