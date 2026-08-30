@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { projectsData } from "../data/projectsData";
 import ScreenshotArea from "../components/ScreenshotArea";
@@ -5,6 +6,14 @@ import ScreenshotArea from "../components/ScreenshotArea";
 export default function ProjectDetail() {
   const { projectId } = useParams();
   const project = projectsData.find((p) => p.id === projectId);
+
+  useEffect(() => {
+    if (project) {
+      document.title = `${project.title} | Hadia Tufail`;
+    } else {
+      document.title = "Project Not Found | Hadia Tufail";
+    }
+  }, [project]);
 
   if (!project) {
     return (
@@ -42,7 +51,7 @@ export default function ProjectDetail() {
         <div className="detail-tech-container">
           <h2 className="detail-tech-heading">Technologies Used</h2>
           <div className="tech-tags">
-            {project.technologies.map((tech, index) => (
+            {(project.technologies || []).map((tech, index) => (
               <span key={index} className="tech-tag tech-tag-lg">
                 {tech}
               </span>
@@ -66,8 +75,8 @@ export default function ProjectDetail() {
                 View on GitHub &rarr;
               </a>
             ) : (
-              <span className="btn btn-outline btn-sm" style={{ cursor: "default", opacity: 0.8 }}>
-                GitHub Repository: Configure in <code>projectsData.js</code>
+              <span className="btn btn-outline btn-sm" style={{ cursor: "default", opacity: 0.85 }}>
+                Repository: Academic / Private
               </span>
             )}
           </div>
@@ -119,7 +128,7 @@ export default function ProjectDetail() {
         <h2 className="section-title">Key Features</h2>
         <div className="features-list-card">
           <ul className="features-list">
-            {project.keyFeatures.map((feature, index) => (
+            {(project.keyFeatures || []).map((feature, index) => (
               <li key={index} className="feature-item">
                 <span className="feature-bullet" aria-hidden="true">&bull;</span>
                 <span>{feature}</span>

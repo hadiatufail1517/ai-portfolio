@@ -1,0 +1,77 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1424 >>
+stream
+BT
+/F1 20 Tf
+50 720 Td
+(Hadia Tufail) Tj
+/F1 12 Tf
+0 -25 Td
+(Software Engineering Student | Full-Stack & AI Developer) Tj
+0 -20 Td
+(Email: hadiatufail1517@gmail.com  |  LinkedIn: linkedin.com/in/hadiatufayl) Tj
+0 -18 Td
+(GitHub: github.com/hadiatufail1517) Tj
+0 -30 Td
+(---------------------------------------------------------------------------------------------------) Tj
+0 -25 Td
+/F1 14 Tf
+(CORE COMPETENCIES & TECHNICAL SKILLS) Tj
+/F1 11 Tf
+0 -20 Td
+(Languages: JavaScript, Python, C++, HTML5, CSS3, SQL) Tj
+0 -16 Td
+(Frontend: React, Redux, Responsive UI Design, Client-Side Routing) Tj
+0 -16 Td
+(Backend & Database: Node.js, Express.js, REST APIs, MongoDB, Mongoose, JWT) Tj
+0 -16 Td
+(AI & Engineering: Machine Learning, NLP, FastAPI, Git, CI/CD, Agile/SDLC) Tj
+0 -30 Td
+/F1 14 Tf
+(SELECTED SOFTWARE ENGINEERING PROJECTS) Tj
+/F1 11 Tf
+0 -20 Td
+(1. AI Interview Platform: MERN-stack mock interview application with AI evaluation) Tj
+0 -16 Td
+(2. AI Capstone Setup (SE-Assist): NLP requirements analysis and SRS/UML automation) Tj
+0 -16 Td
+(3. Bug Tracking System: Issue tracking portal with JWT auth and role management) Tj
+0 -16 Td
+(4. Pharmacare: Full-stack pharmacy management and inventory control web application) Tj
+0 -30 Td
+/F1 14 Tf
+(EDUCATION) Tj
+/F1 11 Tf
+0 -20 Td
+(Bachelor of Science in Software Engineering) Tj
+0 -16 Td
+(Coursework: Data Structures, Algorithms, Database Systems, Web Engineering, AI) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001717 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1787
+%%EOF

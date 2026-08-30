@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function About() {
+  useEffect(() => {
+    document.title = "About Me | Hadia Tufail";
+  }, []);
   const areasOfInterest = [
     {
       title: "Full-Stack Web Engineering",
@@ -117,6 +121,14 @@ export default function About() {
           <Link to="/projects" className="btn btn-primary">
             View Projects
           </Link>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-outline"
+          >
+            Download CV
+          </a>
           <Link to="/contact" className="btn btn-secondary">
             Contact Me
           </Link>

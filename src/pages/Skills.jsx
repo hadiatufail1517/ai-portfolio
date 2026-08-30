@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import { skillsData } from "../data/skillsData";
 import { Link } from "react-router-dom";
 
 export default function Skills() {
+  useEffect(() => {
+    document.title = "Technical Skills | Hadia Tufail";
+  }, []);
   return (
     <div className="page-wrapper skills-page">
       <div className="page-header">

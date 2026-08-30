@@ -53,7 +53,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="https://linkedin.com/in/hadiatufail"
+                href="https://www.linkedin.com/in/hadiatufayl/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

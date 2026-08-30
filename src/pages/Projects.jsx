@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { projectsData } from "../data/projectsData";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
+  useEffect(() => {
+    document.title = "Projects | Hadia Tufail";
+  }, []);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const categories = ["All", "Full-Stack", "AI & ML", "Systems & Tools"];

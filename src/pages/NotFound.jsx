@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function NotFound() {
+  useEffect(() => {
+    document.title = "404 - Page Not Found | Hadia Tufail";
+  }, []);
   return (
     <div className="page-wrapper not-found-page">
       <div className="not-found-card">

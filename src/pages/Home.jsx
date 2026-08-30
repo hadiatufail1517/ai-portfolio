@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { projectsData } from "../data/projectsData";
 import { skillsData } from "../data/skillsData";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "AI Portfolio | Hadia Tufail";
+  }, []);
   // 5 featured projects
   const featuredProjects = projectsData.filter((p) => p.featured);
 
@@ -29,6 +33,14 @@ export default function Home() {
             <Link to="/contact" className="btn btn-secondary">
               Contact Me
             </Link>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline"
+            >
+              Download CV
+            </a>
           </div>
         </div>
 
