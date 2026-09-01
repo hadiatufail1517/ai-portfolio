@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { projectsData } from "../data/projectsData";
 import { skillsData } from "../data/skillsData";
 import ProjectCard from "../components/ProjectCard";
+import HeroBackgroundShader from "../components/HeroBackgroundShader";
 
 export default function Home() {
   useEffect(() => {
@@ -15,6 +16,7 @@ export default function Home() {
     <div className="page-wrapper home-page">
       {/* 1. HERO SECTION */}
       <section className="hero-section">
+        <HeroBackgroundShader />
         <div className="hero-content">
           <div className="hero-badge">
             <span className="hero-badge-dot"></span>
